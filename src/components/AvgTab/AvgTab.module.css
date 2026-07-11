@@ -1,0 +1,129 @@
+.tabContent { display: block; }
+
+.card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(25px) saturate(150%);
+  -webkit-backdrop-filter: blur(25px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.ctitle {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ctitle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.field { margin-bottom: 16px; }
+
+.field label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .85rem;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.inpWrap { position: relative; }
+
+.inpWrap input {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 12px 12px 12px 75px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.unitBadge {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: .7rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.chip {
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  border-radius: 14px;
+  padding: 5px 12px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+}
+
+.chipOn {
+  background: var(--tg-blue-light);
+  color: var(--tg-blue);
+  font-weight: 700;
+}
+
+.avgResultGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.avgMainCard {
+  grid-column: span 2;
+  background: var(--tg-blue-light);
+  border: 1px solid rgba(36, 161, 222, 0.15);
+  border-radius: 12px;
+  padding: 14px;
+  text-align: center;
+}
+
+.avgSubCard {
+  background: rgba(0, 0, 0, 0.01);
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.avgLbl {
+  font-size: 0.7rem;
+  color: var(--muted);
+  margin-bottom: 2px;
+}
+
+.avgVal {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--text);
+}

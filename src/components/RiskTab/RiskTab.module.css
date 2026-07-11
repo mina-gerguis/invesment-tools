@@ -1,0 +1,374 @@
+.tabContent {
+  display: block;
+}
+
+.card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(25px) saturate(150%);
+  -webkit-backdrop-filter: blur(25px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.ctitle {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ctitle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.field {
+  margin-bottom: 16px;
+}
+
+.field label {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: .85rem;
+  color: var(--text);
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.inpWrap {
+  position: relative;
+}
+
+.inpWrap input {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 12px 12px 12px 75px;
+  color: var(--text);
+  font-size: 0.95rem;
+  font-weight: 600;
+  outline: none;
+  transition: all .2s ease;
+}
+
+.inpWrap input:focus {
+  border-color: var(--tg-blue);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(36, 161, 222, 0.1);
+}
+
+.unitBadge {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.04);
+  border-radius: 6px;
+  padding: 3px 8px;
+  font-size: .7rem;
+  color: var(--muted);
+  font-weight: 700;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 8px;
+}
+
+.chip {
+  background: rgba(0, 0, 0, 0.04);
+  border: none;
+  border-radius: 14px;
+  padding: 5px 12px;
+  font-size: .75rem;
+  font-weight: 600;
+  color: var(--text);
+  cursor: pointer;
+  transition: all .15s;
+}
+
+.chipOn {
+  background: var(--tg-blue-light);
+  color: var(--tg-blue);
+  font-weight: 700;
+}
+
+.dirToggle {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+
+.dirBtn {
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.02);
+  color: var(--muted);
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+}
+
+.onBuy {
+  border-color: transparent;
+  background: var(--green-light);
+  color: var(--green);
+}
+
+.onSell {
+  border-color: transparent;
+  background: var(--red-light);
+  color: var(--red);
+}
+
+.rrrGrid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 6px;
+}
+
+.rrrBtn {
+  padding: 10px 4px;
+  border: none;
+  border-radius: 10px;
+  background: rgba(0, 0, 0, 0.04);
+  color: var(--text);
+  font-size: .8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.rrrOn {
+  background: var(--tg-blue);
+  color: #ffffff;
+}
+
+.calcBtn {
+  width: 100%;
+  padding: 14px;
+  background: var(--tg-blue);
+  border: none;
+  border-radius: 12px;
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: opacity .2s;
+}
+
+.errBox {
+  background: var(--red-light);
+  border-radius: 10px;
+  padding: 12px;
+  font-size: .8rem;
+  color: var(--red);
+  margin-top: 10px;
+}
+
+.ladder {
+  position: relative;
+  padding: 12px 0;
+}
+
+.ladderLine {
+  position: absolute;
+  right: 20px;
+  width: 2px;
+  top: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.lrow {
+  display: grid;
+  grid-template-columns: 20px 1fr;
+  gap: 14px;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+}
+
+.lrowDot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid;
+  background: #ffffff;
+}
+
+.lrowContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.01);
+  padding: 8px 12px;
+  border-radius: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.02);
+}
+
+.lrowLabel {
+  font-size: .8rem;
+  font-weight: 600;
+}
+
+.tp { color: var(--green); }
+.entry { color: var(--tg-blue); }
+.sl { color: var(--red); }
+.lrowVal { font-size: .85rem; font-weight: 700; }
+
+.slBox {
+  background: rgba(255, 59, 48, 0.03);
+  border: 1px solid rgba(255, 59, 48, 0.1);
+  border-radius: 14px;
+  padding: 14px;
+}
+
+.slHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.slBadge {
+  font-size: .7rem;
+  font-weight: 700;
+  background: var(--red-light);
+  color: var(--red);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.slPrice {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--red);
+}
+
+.slDetail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 8px;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.slDItem {
+  font-size: .65rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.slDVal {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tpCard {
+  background: rgba(52, 199, 89, 0.03);
+  border: 1px solid rgba(52, 199, 89, 0.1);
+  border-radius: 12px;
+  padding: 14px;
+  margin-bottom: 10px;
+}
+
+.tpHead {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.tpBadge {
+  font-size: .7rem;
+  font-weight: 700;
+  background: var(--green-light);
+  color: var(--green);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.tpRrr {
+  font-size: .7rem;
+  color: var(--orange);
+  font-weight: 700;
+  background: rgba(255, 149, 0, 0.08);
+  border-radius: 6px;
+  padding: 2px 8px;
+}
+
+.tpPrice {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--green);
+}
+
+.tpDetail {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-top: 8px;
+  background: rgba(0, 0, 0, 0.02);
+  padding: 8px;
+  border-radius: 8px;
+}
+
+.tpDItem {
+  font-size: .65rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.tpDVal {
+  font-size: .82rem;
+  font-weight: 700;
+  color: var(--text);
+}
+
+.sumRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.sumRow:last-child {
+  border: none;
+}
+
+.sk { font-size: .8rem; color: var(--muted); }
+.sv { font-size: .85rem; font-weight: 600; }
+
+.resetBtn {
+  width: 100%;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  color: var(--muted);
+  font-size: .85rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 4px;
+}

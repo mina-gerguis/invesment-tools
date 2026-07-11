@@ -1,0 +1,57 @@
+.navBarContainer {
+  position: fixed;
+  bottom: 24px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 40px);
+  max-width: 400px;
+  z-index: 1000;
+}
+
+.tabsNav {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px) saturate(190%);
+  -webkit-backdrop-filter: blur(20px) saturate(190%);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 40px;
+  padding: 6px;
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+}
+
+.tabBtn {
+  background: transparent;
+  border: none;
+  padding: 8px 12px;
+  color: var(--muted);
+  cursor: pointer;
+  border-radius: 32px;
+  transition: all .25s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+}
+
+.navIcon {
+  font-size: 1.25rem;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+
+.navText {
+  font-size: 0.72rem;
+  font-weight: 700;
+}
+
+.active {
+  background: #ffffff;
+  color: var(--tg-blue);
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.active .navIcon {
+  transform: scale(1.1);
+}
