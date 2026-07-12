@@ -1,6 +1,6 @@
 .tabContent {
-  display: block;
-  animation: fadeIn 0.3s ease-in-out;
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
 }
 
 .card {
@@ -12,109 +12,259 @@
   padding: 20px;
   margin-bottom: 16px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+  
+  /* 🆕 الإضافة الجديدة لزيادة العرض وتوسيط الكرت على الكمبيوتر */
+  width: 100%;
+  max-width: 700px; 
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .ctitle {
-  font-size: .75rem;
-  font-weight: 700;
-  color: var(--muted);
-  text-transform: uppercase;
-  margin-bottom: 14px;
-  display: flex;
-  align-items: center;
-  gap: 8px;
+    font-size: .75rem;
+    font-weight: 700;
+    color: var(--muted);
+    text-transform: uppercase;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
 }
 
 .ctitle::after {
-  content: '';
-  flex: 1;
-  height: 1px;
-  background: rgba(0, 0, 0, 0.04);
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: rgba(0, 0, 0, 0.04);
 }
 
 .searchWrap {
-  position: relative;
+    position: relative;
 }
 
 .searchInput {
-  width: 100%;
-  background: var(--input-bg);
-  border: 1px solid rgba(0, 0, 0, 0.08);
-  border-radius: 10px;
-  padding: 12px 40px 12px 12px;
-  color: var(--text);
-  font-size: 0.9rem;
-  font-weight: 600;
-  outline: none;
+    width: 100%;
+    background: var(--input-bg);
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 10px;
+    padding: 12px 40px 12px 12px;
+    color: var(--text);
+    font-size: 0.9rem;
+    font-weight: 600;
+    outline: none;
 }
 
 .searchInput:focus {
-  border-color: var(--tg-blue);
-  box-shadow: 0 0 0 3px rgba(36, 161, 222, 0.1);
+    border-color: var(--tg-blue);
+    box-shadow: 0 0 0 3px rgba(36, 161, 222, 0.1);
 }
 
 .searchIcon {
-  position: absolute;
-  right: 12px;
-  top: 50%;
-  transform: translateY(-50%);
-  font-size: 1.1rem;
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.1rem;
 }
 
-/* تنسيق الجدول على غرار Google Sheets ولكن بلمسة عصرية */
-.stocksTable {
-  width: 100%;
-  border-collapse: collapse;
-  text-align: right;
-  font-size: 0.8rem;
-  min-width: 550px; /* لضمان عدم انضغاط الجدول على الموبايل وسهولة السحب الأفقي */
+.stocksListContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.stocksTable th {
-  background: rgba(0, 0, 0, 0.03);
-  color: var(--muted);
-  padding: 10px;
-  font-weight: 700;
-  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+.stockRowCard {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px;
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.stocksTable td {
-  padding: 12px 10px;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
-  color: var(--text);
-  font-weight: 600;
+.stockRowCard:hover {
+    background: rgba(36, 161, 222, 0.05);
+    border-color: rgba(36, 161, 222, 0.15);
+    transform: translateY(-1px);
 }
 
-.stocksTable tr:hover {
-  background: rgba(36, 161, 222, 0.02);
+.stockLeftPart {
+    display: flex;
+    align-items: center;
+    gap: 12px;
 }
 
-.stockCode {
-  color: var(--tg-blue) !important;
-  font-weight: 700 !important;
+.stockLogoContainer {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 4px;
 }
 
-.stockName {
-  font-size: 0.85rem;
+.stockImgLogo {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.2s ease;
 }
 
-.fairValue {
-  color: var(--orange);
-  font-weight: 700 !important;
+.stockRowCard:hover .stockImgLogo {
+    transform: scale(1.08);
 }
 
-.greenText {
-  color: var(--green);
+.stockMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.stockRowCode {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.stockRowName {
+    font-size: 0.8rem;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.arrowClick {
+    font-size: 0.85rem;
+    opacity: 0.3;
+    transform: scaleX(-1);
+}
+
+.stockRowCard:hover .arrowClick {
+    opacity: 0.8;
+    color: var(--tg-blue);
+}
+
+/* تنسيقات صفحة التفاصيل الجديدة */
+.detailHeader {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    padding-bottom: 14px;
+}
+
+.backBtn {
+    align-self: flex-start;
+    background: rgba(0, 0, 0, 0.05);
+    border: none;
+    border-radius: 8px;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--text);
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.backBtn:hover {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.stockIdentityDetail {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.titleMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.titleMeta h2 {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--text);
+    margin: 0;
+}
+
+.badgeCode {
+    align-self: flex-start;
+    background: rgba(36, 161, 222, 0.1);
+    color: var(--tg-blue);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 2px 8px;
+    border-radius: 6px;
+}
+
+.detailImgLogo {
+    border-radius: 12px;
+}
+
+.detailsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 480px) {
+    .detailsGrid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.detailItem {
+    background: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    border-radius: 10px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.detailLabel {
+    font-size: 0.75rem;
+    font-weight: 600;
+    color: var(--muted);
+}
+
+.detailValue {
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.greenReturn {
+    color: var(--green) !important;
+}
+
+.redReturn {
+    color: #e53935 !important;
 }
 
 .noResults {
-  text-align: center;
-  padding: 20px;
-  color: var(--muted);
-  font-size: 0.85rem;
+    text-align: center;
+    padding: 20px;
+    color: var(--muted);
+    font-size: 0.85rem;
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(8px); }
-  to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }

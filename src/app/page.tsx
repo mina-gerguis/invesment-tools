@@ -5,7 +5,7 @@ import HeaderTitle from "../components/header";
 import Navigation from "../components/Navigation/Navigation";
 import RiskTab from "../components/RiskTab/RiskTab";
 import AvgTab from "../components/AvgTab/AvgTab";
-import StocksTab from "../components/StocksTab/StocksTab"; // استيراد التبويب الجديد
+import StocksTab from "../components/StocksTab/StocksTab";
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<string>("risk");
@@ -14,10 +14,11 @@ export default function Home() {
     <>
       <HeaderTitle />
 
-      <main className="wrap">
+      {/* 🆕 قمنا بإضافة شرط ذكي هنا: إذا كان التبويب هو الأسهم المصرية، نلغي قيود كلاس wrap القديم ليتمدد براحته */}
+      <main className={activeTab === "egStocks" ? "wrap-wide" : "wrap"}>
         {activeTab === "risk" && <RiskTab />}
         {activeTab === "avg" && <AvgTab />}
-        {activeTab === "egStocks" && <StocksTab />} {/* تشغيل التبويب الجديد هنا */}
+        {activeTab === "egStocks" && <StocksTab />}
       </main>
 
       <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />

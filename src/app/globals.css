@@ -75,3 +75,22 @@ a {
     color-scheme: dark;
   }
 }
+
+
+
+/* الكلاس الجديد الذي يسمح لصفحة الأسهم بالاتساع الكامل على الكمبيوتر */
+.wrap-wide {
+  width: 100%;
+  max-width: 1000px; /* 🆕 مساحة عريضة جداً وممتازة للكمبيوتر */
+  margin: 0 auto;
+  padding: 20px 16px 120px 16px;
+  box-sizing: border-box;
+  transition: max-width 0.3s ease;
+}
+
+/* للموبايل يظل متناسقاً */
+@media (max-width: 768px) {
+  .wrap-wide {
+    max-width: 480px; 
+  }
+}
