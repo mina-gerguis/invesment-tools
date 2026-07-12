@@ -1,0 +1,120 @@
+.tabContent {
+  display: block;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.card {
+  background: var(--glass-surface);
+  backdrop-filter: blur(25px) saturate(150%);
+  -webkit-backdrop-filter: blur(25px) saturate(150%);
+  border: 1px solid var(--glass-border);
+  border-radius: 14px;
+  padding: 20px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.02);
+}
+
+.ctitle {
+  font-size: .75rem;
+  font-weight: 700;
+  color: var(--muted);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.ctitle::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: rgba(0, 0, 0, 0.04);
+}
+
+.searchWrap {
+  position: relative;
+}
+
+.searchInput {
+  width: 100%;
+  background: var(--input-bg);
+  border: 1px solid rgba(0, 0, 0, 0.08);
+  border-radius: 10px;
+  padding: 12px 40px 12px 12px;
+  color: var(--text);
+  font-size: 0.9rem;
+  font-weight: 600;
+  outline: none;
+}
+
+.searchInput:focus {
+  border-color: var(--tg-blue);
+  box-shadow: 0 0 0 3px rgba(36, 161, 222, 0.1);
+}
+
+.searchIcon {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.1rem;
+}
+
+/* تنسيق الجدول على غرار Google Sheets ولكن بلمسة عصرية */
+.stocksTable {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: right;
+  font-size: 0.8rem;
+  min-width: 550px; /* لضمان عدم انضغاط الجدول على الموبايل وسهولة السحب الأفقي */
+}
+
+.stocksTable th {
+  background: rgba(0, 0, 0, 0.03);
+  color: var(--muted);
+  padding: 10px;
+  font-weight: 700;
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+}
+
+.stocksTable td {
+  padding: 12px 10px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.03);
+  color: var(--text);
+  font-weight: 600;
+}
+
+.stocksTable tr:hover {
+  background: rgba(36, 161, 222, 0.02);
+}
+
+.stockCode {
+  color: var(--tg-blue) !important;
+  font-weight: 700 !important;
+}
+
+.stockName {
+  font-size: 0.85rem;
+}
+
+.fairValue {
+  color: var(--orange);
+  font-weight: 700 !important;
+}
+
+.greenText {
+  color: var(--green);
+}
+
+.noResults {
+  text-align: center;
+  padding: 20px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}

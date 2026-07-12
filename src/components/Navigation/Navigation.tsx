@@ -21,12 +21,21 @@ export default function Navigation({ activeTab, setActiveTab }: NavigationProps)
           <span className={styles.navIcon}>🎯</span>
           <span className={styles.navText}>إدارة المخاطر</span>
         </button>
+        
         <button 
           className={`${styles.tabBtn} ${activeTab === "avg" ? styles.active : ""}`}
           onClick={() => handleTabChange("avg")}
         >
           <span className={styles.navIcon}>📊</span>
           <span className={styles.navText}>حساب المتوسط</span>
+        </button>
+
+        <button 
+          className={`${styles.tabBtn} ${activeTab === "egStocks" ? styles.active : ""}`}
+          onClick={() => handleTabChange("egStocks")}
+        >
+          <span className={styles.navIcon}>🎗️</span>
+          <span className={styles.navText}>الأسهم المصرية</span>
         </button>
       </div>
     </div>

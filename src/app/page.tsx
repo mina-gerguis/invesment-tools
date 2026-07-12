@@ -1,26 +1,25 @@
 'use client';
 
 import { useState } from "react";
-import HeaderTitle from "@/components/header";
-import Navigation from "@/components/Navigation/Navigation";
-import RiskTab from "@/components/RiskTab/RiskTab";
-import AvgTab from "@/components/AvgTab/AvgTab";
+import HeaderTitle from "../components/header";
+import Navigation from "../components/Navigation/Navigation";
+import RiskTab from "../components/RiskTab/RiskTab";
+import AvgTab from "../components/AvgTab/AvgTab";
+import StocksTab from "../components/StocksTab/StocksTab"; // استيراد التبويب الجديد
 
 export default function Home() {
   const [activeTab, setActiveTab] = useState<string>("risk");
 
   return (
     <>
-      {/* رأس الصفحة الزجاجي */}
       <HeaderTitle />
 
-      {/* الحاوية المركزية للتطبيق */}
       <main className="wrap">
         {activeTab === "risk" && <RiskTab />}
         {activeTab === "avg" && <AvgTab />}
+        {activeTab === "egStocks" && <StocksTab />} {/* تشغيل التبويب الجديد هنا */}
       </main>
 
-      {/* شريط التنقل السفلي العائم */}
       <Navigation activeTab={activeTab} setActiveTab={setActiveTab} />
     </>
   );

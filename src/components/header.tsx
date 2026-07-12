@@ -25,14 +25,13 @@ export default function HeaderTitle() {
             />
             <h1
                 style={{
-                    fontFamily: "Hagrid",
                     fontSize: "1.15rem",
                     fontWeight: "900",
                     margin: "0 10px",
                     color: "var(--text)",
                 }}
             >
-                مركز الاستثمار
+                مركز الاستثمارات
             </h1>
         </div >
     );
