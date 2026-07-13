@@ -63,6 +63,13 @@ export default function StocksTab() {
                         <div className={styles.detailItem} style={{ gridColumn: '1 / -1', background: 'rgba(255, 152, 0, 0.08)' }}>
                             <span className={styles.detailLabel}>🎯 القيمة العادلة</span>
                             <span className={styles.detailValue} style={{ color: 'var(--orange)', fontSize: '1.3rem' }}>{selectedStock.fairValue.toFixed(2)} ج.م</span>
+                            <p
+                            style={{
+                                color: "var(--muted)",
+                                fontSize: "12px"
+                            }}
+                            >القيمة العادلة للسهم يتم تحديدها من موقع <a 
+                            style={{color: "red"}} href="https://arabicstock.com/" target="_blanck">السهم العربي</a></p>
                         </div>
                     </div>
                 </div>
