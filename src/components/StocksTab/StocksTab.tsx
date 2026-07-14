@@ -43,6 +43,10 @@ export default function StocksTab() {
                             <span className={styles.detailValue}>{selectedStock.sector}</span>
                         </div>
                         <div className={styles.detailItem}>
+                            <span className={styles.detailLabel}>🏗️ الصناعة</span>
+                            <span className={styles.detailValue}>{selectedStock.industry}</span>
+                        </div>
+                        <div className={styles.detailItem}>
                             <span className={styles.detailLabel}>📈 المؤشر</span>
                             <span className={styles.detailValue}>{selectedStock.index}</span>
                         </div>
@@ -118,6 +122,7 @@ export default function StocksTab() {
                                         <span className={styles.stockRowCode}>{stock.code}</span>
                                         <span className={styles.stockRowName}>{stock.name}</span>
                                     </div>
+                                    {/* <span>{stock.industry}</span> */}
                                 </div>
                                 <div className={styles.arrowClick}>➡️</div>
                             </div>
